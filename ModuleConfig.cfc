@@ -1,5 +1,7 @@
 component {
 	public any function configure() {
-		return;
+		interceptors = [
+			{ class="#moduleMapping#.interceptors.packageInstall" }
+		];
 	}
 }

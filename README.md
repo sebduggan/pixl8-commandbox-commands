@@ -28,3 +28,10 @@ This package should be installed to local CommandBox installations with:
 box install pixl8/pixl8-commandbox-commands.git#stable
 ```
 
+## Other features
+
+As of CommandBox 5.1.0, `box install` in a project will overwrite any package (e.g. a Preside extension) where the current version does not match the installed version number - including downgrades.
+
+This means that if your project has an extension which is a Git repo, rather than a built release, it will always get overwritten, which is not ideal.
+
+This module adds protection against this, so if the existing package is a Git repo, it will _never_ be overwritten.
